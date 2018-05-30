@@ -31,4 +31,22 @@ public class LeetCodeTest {
    public void longestCommonPrefix() {
       assert ("flo".equals(LongestCommonPrefix.longestCommonPrefix(new String[]{"flow", "flower", "flotsdam"})));
    }
+
+   @Test
+   public void mergeTwoLists() {
+      MergeTwoLists.ListNode listOne = new MergeTwoLists.ListNode(1);
+      listOne.next = new MergeTwoLists.ListNode(2);
+      listOne.next.next = new MergeTwoLists.ListNode(4);
+      MergeTwoLists.ListNode listTwo = new MergeTwoLists.ListNode(1);
+      listTwo.next = new MergeTwoLists.ListNode(3);
+      listTwo.next.next = new MergeTwoLists.ListNode(4);
+      MergeTwoLists.ListNode output = MergeTwoLists.mergeTwoLists(listOne, listTwo);
+      MergeTwoLists.ListNode expected = new MergeTwoLists.ListNode(1);
+      expected.next = new MergeTwoLists.ListNode(1);
+      expected.next.next = new MergeTwoLists.ListNode(2);
+      expected.next.next.next = new MergeTwoLists.ListNode(3);
+      expected.next.next.next.next = new MergeTwoLists.ListNode(4);
+      expected.next.next.next.next.next = new MergeTwoLists.ListNode(4);
+      assert (output.val == expected.val && output.next.next.val == expected.next.next.val && output.next.next.next.next.next.val == expected.next.next.next.next.next.val);
+   }
 }
