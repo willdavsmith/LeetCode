@@ -65,4 +65,9 @@ public class LeetCodeTest {
    public void reverseInteger() {
       assert (ReverseInteger.reverseInteger(-32151) == -15123);
    }
+
+   @Test
+   public void romanToInt() {
+      assert (RomanToInteger.romanToInt("MCMXCIV") == 1994 && RomanToInteger.romanToInt("LVIII") == 58);
+   }
 }
