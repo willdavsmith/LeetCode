@@ -70,4 +70,9 @@ public class LeetCodeTest {
    public void romanToInt() {
       assert (RomanToInteger.romanToInt("MCMXCIV") == 1994 && RomanToInteger.romanToInt("LVIII") == 58);
    }
+
+   @Test
+   public void searchInsertPosition() {
+      assert (SearchInsertPosition.searchInsertPosition(new int[]{1, 3, 5, 6}, 5) == 2);
+   }
 }
