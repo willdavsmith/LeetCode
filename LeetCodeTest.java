@@ -60,4 +60,9 @@ public class LeetCodeTest {
       treeThree.left = new SameTree.TreeNode(2);
       assert (SameTree.isSameTree(treeOne, treeTwo) && !SameTree.isSameTree(treeTwo, treeThree));
    }
+
+   @Test
+   public void reverseInteger() {
+      assert (ReverseInteger.reverseInteger(-32151) == -15123);
+   }
 }
