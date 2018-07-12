@@ -80,4 +80,16 @@ public class LeetCodeTest {
    public void hammingDistance() {
       assert (HammingDistance.hammingDistance(1, 4) == 2);
    }
+
+   @Test
+   public void mergeTrees() {
+      MergeTwoBinaryTrees.TreeNode t1 = new MergeTwoBinaryTrees.TreeNode(1);
+      t1.left = new MergeTwoBinaryTrees.TreeNode(2);
+      t1.right = new MergeTwoBinaryTrees.TreeNode(3);
+      t1.right.right = new MergeTwoBinaryTrees.TreeNode(7);
+      MergeTwoBinaryTrees.TreeNode t2 = new MergeTwoBinaryTrees.TreeNode(1);
+      t2.left = new MergeTwoBinaryTrees.TreeNode(2);
+      MergeTwoBinaryTrees.TreeNode output = MergeTwoBinaryTrees.mergeTrees(t1, t2);
+      assert output.right.right.val == 7;
+   }
 }
