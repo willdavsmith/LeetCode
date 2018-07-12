@@ -92,4 +92,9 @@ public class LeetCodeTest {
       MergeTwoBinaryTrees.TreeNode output = MergeTwoBinaryTrees.mergeTrees(t1, t2);
       assert output.right.right.val == 7;
    }
+
+   @Test
+   public void countBits() {
+      assert (2 == CountingBits.countBits(5)[5]);
+   }
 }
