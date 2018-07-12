@@ -11,23 +11,6 @@ public class LeetCodeTest {
    }
 
    @Test
-   public void addTwoNumbers() {
-      AddTwoNumbers.ListNode l1 = new AddTwoNumbers.ListNode(2);
-      l1.next = new AddTwoNumbers.ListNode(4);
-      l1.next.next = new AddTwoNumbers.ListNode(3);
-      AddTwoNumbers.ListNode l2 = new AddTwoNumbers.ListNode(5);
-      l2.next = new AddTwoNumbers.ListNode(6);
-      l2.next.next = new AddTwoNumbers.ListNode(4);
-
-      AddTwoNumbers.ListNode output = AddTwoNumbers.addTwoNumbers(l1, l2);
-      AddTwoNumbers.ListNode expected = new AddTwoNumbers.ListNode(7);
-      expected.next = new AddTwoNumbers.ListNode(0);
-      expected.next.next = new AddTwoNumbers.ListNode(8);
-
-      assert (output.val == expected.val && output.next.val == expected.next.val && output.next.next.val == expected.next.next.val);
-   }
-
-   @Test
    public void longestCommonPrefix() {
       assert ("flo".equals(LongestCommonPrefix.longestCommonPrefix(new String[]{"flow", "flower", "flotsdam"})));
    }
@@ -48,5 +31,33 @@ public class LeetCodeTest {
       expected.next.next.next.next = new MergeTwoLists.ListNode(4);
       expected.next.next.next.next.next = new MergeTwoLists.ListNode(4);
       assert (output.val == expected.val && output.next.next.val == expected.next.next.val && output.next.next.next.next.next.val == expected.next.next.next.next.next.val);
+   }
+
+   @Test
+   public void lengthOfLastWord() {
+      assert LengthOfLastWord.lengthOfLastWord("$ Hello    ##$Q World    ") == 5;
+   }
+
+   @Test
+   public void validParentheses() {
+      assert ValidParentheses.validParentheses("()[]{[()]}") && !ValidParentheses.validParentheses("]");
+   }
+
+   @Test
+   public void singleNumber() {
+      assert SingleNumber.singleNumber(new int[]{1, 2, 2}) == 1;
+   }
+
+   @Test
+   public void isSameTree() {
+      SameTree.TreeNode treeOne = new SameTree.TreeNode(1);
+      treeOne.left = new SameTree.TreeNode(2);
+      treeOne.right = new SameTree.TreeNode(3);
+      SameTree.TreeNode treeTwo = new SameTree.TreeNode(1);
+      treeTwo.left = new SameTree.TreeNode(2);
+      treeTwo.right = new SameTree.TreeNode(3);
+      SameTree.TreeNode treeThree = new SameTree.TreeNode(1);
+      treeThree.left = new SameTree.TreeNode(2);
+      assert (SameTree.isSameTree(treeOne, treeTwo) && !SameTree.isSameTree(treeTwo, treeThree));
    }
 }

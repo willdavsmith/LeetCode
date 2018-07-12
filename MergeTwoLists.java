@@ -37,13 +37,4 @@ public class MergeTwoLists {
       }
       return output;
    }
-   public static void main(String[] args) {
-      ListNode listOne = new ListNode(1);
-      listOne.next = new ListNode(2);
-      listOne.next.next = new ListNode(4);
-      ListNode listTwo = new ListNode(1);
-      listTwo.next = new ListNode(3);
-      listTwo.next.next = new ListNode(4);
-      System.out.println(mergeTwoLists(listOne, listTwo).next.next.next.next.next.val);
-   }
 }
