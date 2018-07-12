@@ -75,4 +75,9 @@ public class LeetCodeTest {
    public void searchInsertPosition() {
       assert (SearchInsertPosition.searchInsertPosition(new int[]{1, 3, 5, 6}, 5) == 2);
    }
+
+   @Test
+   public void hammingDistance() {
+      assert (HammingDistance.hammingDistance(1, 4) == 2);
+   }
 }
