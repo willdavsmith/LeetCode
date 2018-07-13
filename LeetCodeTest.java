@@ -99,6 +99,18 @@ public class LeetCodeTest {
    }
 
    @Test
+   public void moveZeroes() {
+      int[] move = new int[]{0, 1, 4, 5, 7, 0 , 9, 0};
+      MoveZeros.moveZeroes(move);
+      String output = "";
+      String expected = "14579000";
+      for (int a : move) {
+         output += a;
+      }
+      assert output.equals(expected);
+   }
+
+   @Test
    public void reconstructQueue() {
       int[][] input = new int[][]{new int[]{7, 0}, new int[]{4, 4}, new int[]{7, 1}, new int[]{5, 0}, new int[]{6, 1}, new int[]{5, 2}};
       int[][] output =QueueReconstructionByHeight.reconstructQueue(input);
