@@ -111,4 +111,18 @@ public class LeetCodeTest {
       }
       assert equal;
    }
+
+   @Test
+   public void maxDepth() {
+      MaximumDepthOfBinaryTree.TreeNode depthThree = new MaximumDepthOfBinaryTree.TreeNode(3);
+      depthThree.left = new MaximumDepthOfBinaryTree.TreeNode(9);
+      depthThree.right = new MaximumDepthOfBinaryTree.TreeNode(20);
+      depthThree.right.left = new MaximumDepthOfBinaryTree.TreeNode(15);
+      depthThree.right.right = new MaximumDepthOfBinaryTree.TreeNode(7);
+      MaximumDepthOfBinaryTree.TreeNode nullNode = null;
+      MaximumDepthOfBinaryTree.TreeNode depthOne = new MaximumDepthOfBinaryTree.TreeNode(2384);
+      MaximumDepthOfBinaryTree.TreeNode depthTwo = new MaximumDepthOfBinaryTree.TreeNode(2);
+      depthTwo.left = new MaximumDepthOfBinaryTree.TreeNode(0);
+      assert (MaximumDepthOfBinaryTree.maxDepth(depthOne) == 1 && MaximumDepthOfBinaryTree.maxDepth(depthTwo) == 2 && MaximumDepthOfBinaryTree.maxDepth(depthThree) == 3 && MaximumDepthOfBinaryTree.maxDepth(nullNode) == 0);
+   }
 }
