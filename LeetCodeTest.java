@@ -125,4 +125,14 @@ public class LeetCodeTest {
       depthTwo.left = new MaximumDepthOfBinaryTree.TreeNode(0);
       assert (MaximumDepthOfBinaryTree.maxDepth(depthOne) == 1 && MaximumDepthOfBinaryTree.maxDepth(depthTwo) == 2 && MaximumDepthOfBinaryTree.maxDepth(depthThree) == 3 && MaximumDepthOfBinaryTree.maxDepth(nullNode) == 0);
    }
+
+   @Test
+   public void invertTree() {
+      InvertBinaryTree.TreeNode reverse = new InvertBinaryTree.TreeNode(4);
+      reverse.left = new InvertBinaryTree.TreeNode(7);
+      reverse.right = new InvertBinaryTree.TreeNode(2);
+      reverse.left.left = new InvertBinaryTree.TreeNode(9);
+      InvertBinaryTree.TreeNode reversed = InvertBinaryTree.invertTree(reverse);
+      assert (reversed.right.right.val == 9);
+   }
 }
