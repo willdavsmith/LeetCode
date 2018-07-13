@@ -22,15 +22,4 @@ public class MergeTwoBinaryTrees {
       }
       return t1;
    }
-
-   public static void main(String[] args) {
-      TreeNode t1 = new TreeNode(1);
-      t1.left = new TreeNode(2);
-      t1.right = new TreeNode(3);
-      t1.right.right = new TreeNode(7);
-      TreeNode t2 = new TreeNode(1);
-      t2.left = new TreeNode(2);
-      TreeNode output = mergeTrees(t1, t2);
-      System.out.println(output.right.right.val);
-   }
 }
