@@ -97,4 +97,18 @@ public class LeetCodeTest {
    public void countBits() {
       assert (2 == CountingBits.countBits(5)[5]);
    }
+
+   @Test
+   public void reconstructQueue() {
+      int[][] input = new int[][]{new int[]{7, 0}, new int[]{4, 4}, new int[]{7, 1}, new int[]{5, 0}, new int[]{6, 1}, new int[]{5, 2}};
+      int[][] output =QueueReconstructionByHeight.reconstructQueue(input);
+      int[][] expected = new int[][]{new int[]{5, 0}, new int[]{7, 0}, new int[]{5, 2}, new int[]{6, 1}, new int[]{4, 4}, new int[]{7, 1}};
+      boolean equal = true;
+      for (int i=0; i<output.length; i++) {
+         if (output[i] != expected[i]) {
+            equal = false;
+         }
+      }
+      assert equal;
+   }
 }
