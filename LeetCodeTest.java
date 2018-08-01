@@ -113,11 +113,11 @@ public class LeetCodeTest {
    @Test
    public void reconstructQueue() {
       int[][] input = new int[][]{new int[]{7, 0}, new int[]{4, 4}, new int[]{7, 1}, new int[]{5, 0}, new int[]{6, 1}, new int[]{5, 2}};
-      int[][] output =QueueReconstructionByHeight.reconstructQueue(input);
+      int[][] output = QueueReconstructionByHeight.reconstructQueue(input);
       int[][] expected = new int[][]{new int[]{5, 0}, new int[]{7, 0}, new int[]{5, 2}, new int[]{6, 1}, new int[]{4, 4}, new int[]{7, 1}};
       boolean equal = true;
       for (int i=0; i<output.length; i++) {
-         if (output[i] != expected[i]) {
+         if (output[i][0] != expected[i][0] && output[i][1] != expected[i][0]) {
             equal = false;
          }
       }
