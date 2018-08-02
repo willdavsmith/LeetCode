@@ -1,4 +1,5 @@
 import org.junit.Test;
+import org.junit.Assert;
 
 public class LeetCodeTest {
    @Test
@@ -7,12 +8,15 @@ public class LeetCodeTest {
       int target = 19;
       int[] expected = new int[]{1, 2};
       int[] output = TwoSum.twoSum(input, target);
-      assert (expected[0] == output[0] && expected[1] == output[1]);
+      Assert.assertArrayEquals(output, expected);
    }
 
    @Test
    public void longestCommonPrefix() {
-      assert ("flo".equals(LongestCommonPrefix.longestCommonPrefix(new String[]{"flow", "flower", "flotsdam"})));
+      String[] input = new String[]{"flow", "flower", "flotsdam"};
+      String expected = "flo";
+      String output = LongestCommonPrefix.longestCommonPrefix(input);
+      Assert.assertEquals(output, expected);
    }
 
    @Test
@@ -30,7 +34,7 @@ public class LeetCodeTest {
       expected.next.next.next = new MergeTwoLists.ListNode(3);
       expected.next.next.next.next = new MergeTwoLists.ListNode(4);
       expected.next.next.next.next.next = new MergeTwoLists.ListNode(4);
-      assert (output.val == expected.val && output.next.next.val == expected.next.next.val && output.next.next.next.next.next.val == expected.next.next.next.next.next.val);
+      Assert.assertEquals(output.val, expected.val);
    }
 
    @Test
@@ -115,13 +119,7 @@ public class LeetCodeTest {
       int[][] input = new int[][]{new int[]{7, 0}, new int[]{4, 4}, new int[]{7, 1}, new int[]{5, 0}, new int[]{6, 1}, new int[]{5, 2}};
       int[][] output = QueueReconstructionByHeight.reconstructQueue(input);
       int[][] expected = new int[][]{new int[]{5, 0}, new int[]{7, 0}, new int[]{5, 2}, new int[]{6, 1}, new int[]{4, 4}, new int[]{7, 1}};
-      boolean equal = true;
-      for (int i=0; i<output.length; i++) {
-         if (output[i][0] != expected[i][0] && output[i][1] != expected[i][0]) {
-            equal = false;
-         }
-      }
-      assert equal;
+      Assert.assertArrayEquals(output, expected);
    }
 
    @Test
