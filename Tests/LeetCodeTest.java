@@ -153,4 +153,10 @@ public class LeetCodeTest {
       TreeNode reversed = InvertBinaryTree.invertTree(reverse);
       assert (reversed.right.right.val == 9);
    }
+
+   @Test
+   public void countSubstrings() {
+      assert (PalindromicSubstrings.countSubstrings("aaa") == 6)
+            && PalindromicSubstrings.countSubstrings("abaaca") == 9;
+   }
 }
