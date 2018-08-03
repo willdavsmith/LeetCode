@@ -4,6 +4,9 @@ import org.junit.Assert;
 import Files.*;
 import DataStructs.*;
 
+import java.util.LinkedList;
+import java.util.List;
+
 public class LeetCodeTest {
    @Test
    public void twoSum() {
@@ -158,5 +161,14 @@ public class LeetCodeTest {
    public void countSubstrings() {
       assert (PalindromicSubstrings.countSubstrings("aaa") == 6)
             && PalindromicSubstrings.countSubstrings("abaaca") == 9;
+   }
+
+   @Test
+   public void findDisappearedNumbers() {
+      List<Integer> expected = new LinkedList<>();
+      expected.add(5);
+      expected.add(6);
+      List<Integer> output = FindDisappearedNumbers.findDisappearedNumbers(new int[]{4,3,2,7,8,2,3,1});
+      assert (expected.get(0).equals(output.get(0)));
    }
 }
