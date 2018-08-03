@@ -174,6 +174,6 @@ public class LeetCodeTest {
 
    @Test
    public void majorityElement() {
-      assert MajorityElement.majorityElement(new int[]{3, 2, 3}) == 3;
+      assert MajorityElement.majorityElement(new int[]{2, 3, 2, 2, 3}) == 2;
    }
 }
