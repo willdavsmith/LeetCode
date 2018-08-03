@@ -171,4 +171,9 @@ public class LeetCodeTest {
       List<Integer> output = FindDisappearedNumbers.findDisappearedNumbers(new int[]{4,3,2,7,8,2,3,1});
       assert (expected.get(0).equals(output.get(0)));
    }
+
+   @Test
+   public void majorityElement() {
+      assert MajorityElement.majorityElement(new int[]{3, 2, 3}) == 3;
+   }
 }
