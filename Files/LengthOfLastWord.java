@@ -1,3 +1,5 @@
+package Files;
+
 public class LengthOfLastWord {
    public static int lengthOfLastWord(String s) {
       int i = s.trim().length() - 1;

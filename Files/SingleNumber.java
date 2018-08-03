@@ -1,8 +1,10 @@
-import java.util.*;
+package Files;
+import java.util.HashMap;
+import java.util.Map;
 
 public class SingleNumber {
    public static int singleNumber(int[] nums) {
-      Map comparator = new HashMap();
+      Map<Integer, Integer> comparator = new HashMap<>();
       for (int num : nums) {
          if (!comparator.containsKey(num)) {
             comparator.put(num, 1);

@@ -1,10 +1,7 @@
+package Files;
+import DataStructs.TreeNode;
+
 public class MergeTwoBinaryTrees {
-   public static class TreeNode {
-      int val;
-      TreeNode left;
-      TreeNode right;
-      TreeNode(int x) { val = x; }
-   }
    public static TreeNode mergeTrees(TreeNode t1, TreeNode t2) {
       if (t1 != null && t2 != null) {
          t1.val += t2.val;

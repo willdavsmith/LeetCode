@@ -1,3 +1,4 @@
+package Files;
 import java.util.Set;
 import java.util.HashSet;
 
@@ -45,14 +46,5 @@ public class QueueReconstructionByHeight {
             }
          }
       }
-   }
-   public static void main(String[] args) {
-      int[][] input = new int[][]{new int[]{7, 0}, new int[]{4, 4}, new int[]{7, 1}, new int[]{5, 0}, new int[]{6, 1}, new int[]{5, 2}};
-      int[][] output = reconstructQueue(input);
-      int[][] empty = new int[6][2];
-      for (int[] element : output) {
-         System.out.println(element[0] + " " + element[1]);
-      }
-      int[][] expected = new int[][]{new int[]{5, 0}, new int[]{7, 0}, new int[]{5, 2}, new int[]{6, 1}, new int[]{4, 4}, new int[]{7, 1}};
    }
 }

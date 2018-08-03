@@ -1,3 +1,5 @@
+package Files;
+
 public class HammingDistance {
    public static int hammingDistance(int x, int y) {
       String val = Integer.toBinaryString(x^y);

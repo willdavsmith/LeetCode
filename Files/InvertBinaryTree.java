@@ -1,11 +1,7 @@
-public class InvertBinaryTree {
-   public static class TreeNode {
-      int val;
-      TreeNode left;
-      TreeNode right;
-      TreeNode(int x) { val = x; }
-   }
+package Files;
+import DataStructs.TreeNode;
 
+public class InvertBinaryTree {
    public static TreeNode invertTree(TreeNode root) {
       if (root == null) return null;
       else {
