@@ -176,4 +176,9 @@ public class LeetCodeTest {
    public void majorityElement() {
       assert MajorityElement.majorityElement(new int[]{2, 3, 2, 2, 3}) == 2;
    }
+
+   @Test
+   public void maxProfit() {
+      assert 5 == MaxProfit.maxProfit(new int[]{7,1,5,3,6,4});
+   }
 }
