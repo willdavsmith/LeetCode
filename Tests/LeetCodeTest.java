@@ -181,4 +181,17 @@ public class LeetCodeTest {
    public void maxProfit() {
       assert 5 == MaxProfit.maxProfit(new int[]{7,1,5,3,6,4});
    }
+
+   @Test
+   public void addTwoNumbers() {
+      ListNode listOne = new ListNode(2);
+      listOne.next = new ListNode(4);
+      listOne.next.next = new ListNode(4);
+      ListNode listTwo = new ListNode(5);
+      listTwo.next = new ListNode(5);
+      ListNode output = AddTwoNumbers.addTwoNumbers(listOne, listTwo);
+      ListNode expected = new ListNode(7);
+      expected.next = new ListNode(9);
+      expected.next = new ListNode(4);
+   }
 }
